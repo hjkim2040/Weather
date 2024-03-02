@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url:
+    username:
+    password:
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+  profiles:
+    active: secret
+springdoc:
+  paths-to-match:
+    - /**
+  default-consumes-media-type: application/json;charset=UTF-8
+  default-produces-media-type: application/json;charset=UTF-8
+  swagger-ui:
+    path:
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    groups:
+      enabled: true
+  cache:
+    disabled: true
+  packages-to-scan:
+logging:
+  config: src/main/resources/logback-spring.xml
+openweathermap:
+  key:
+
